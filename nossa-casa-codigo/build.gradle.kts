@@ -37,6 +37,16 @@ dependencies {
     runtimeOnly("ch.qos.logback:logback-classic")
     runtimeOnly("com.fasterxml.jackson.module:jackson-module-kotlin")
     runtimeOnly("com.h2database:h2")
+
+    //JPA
+    //runtime("io.micronaut.sql:micronaut-jdbc-tomcat")
+    runtimeOnly("io.micronaut.sql:micronaut-jdbc-hikari")
+    //runtime("io.micronaut.sql:micronaut-jdbc-hikari") //deprecate
+    implementation("io.micronaut.data:micronaut-data-hibernate-jpa")
+    // https://mvnrepository.com/artifact/org.postgresql/postgresql
+    implementation("org.postgresql:postgresql:42.2.18")
+
+
 }
 
 
