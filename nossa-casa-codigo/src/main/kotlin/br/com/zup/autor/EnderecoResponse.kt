@@ -1,6 +1,6 @@
 package br.com.zup.autor
 
-class EnderecoResponse(
+data class EnderecoResponse(
     val cep: String,
     val logradouro: String,
     val bairro: String,
