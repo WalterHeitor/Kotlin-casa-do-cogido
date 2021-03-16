@@ -8,9 +8,9 @@ import javax.transaction.Transactional
 
 
 @Controller("/autores/")
-open class AtualizaAutorController(val autorRepository: AutorRepository) {
+ class AtualizaAutorController(val autorRepository: AutorRepository) {
     @Put("{id}")
-//    @Transactional
+    @Transactional
     fun atualiza(@PathVariable id: Long, descricao:String): HttpResponse<Any> {
         val possivelAutor = autorRepository.findById(id)
         if(possivelAutor.isEmpty){

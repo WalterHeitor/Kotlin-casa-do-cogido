@@ -9,7 +9,7 @@ import javax.transaction.Transactional
 @Controller("/autores/")
 class DeletaAutorController(val autorRepository: AutorRepository) {
     @Delete("/{id}")
-//    @Transactional
+    @Transactional
     fun deletar(@PathVariable id: Long): HttpResponse<Any>{
         val possivelAutor = autorRepository.findById(id)
         if(possivelAutor.isEmpty){
