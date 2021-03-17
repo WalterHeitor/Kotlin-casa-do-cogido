@@ -13,8 +13,8 @@ import javax.validation.Valid
 @Validated
 @Controller("/autores")
 class CadastraAutorController(
-    @Inject val autorRepository: AutorRepository,
-    @Inject val enderecoClient: EnderecoClient
+    @Inject val autorRepository: AutorRepository, //
+    @Inject val enderecoClient: EnderecoClient  //
 ) {
     @Post
     @Transactional
